@@ -1,4 +1,3 @@
-import React from 'react'
 import { MdBarChart } from "react-icons/md";
 import { FaArrowPointer } from "react-icons/fa6";
 import { TbChartCircles } from "react-icons/tb";
