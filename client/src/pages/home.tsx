@@ -2,6 +2,14 @@ import Details from "../components/Details"
 import img from "../assets/newIm.jpg"
 import Services from "../components/Services"
 import Details2 from "../components/Details2"
+import Strategies from "../components/Strategies"
+import PeaceOfMind from "../components/PeaceOfMind"
+import { Review } from "../components/Review"
+import FAQ from "../components/FAQ"
+import Connect from "../components/Connect"
+import Footer from "../components/Footer"
+
+
 export const Home = () => {
   return (
     <>
@@ -16,6 +24,12 @@ export const Home = () => {
       <Details />
       <Services />
       <Details2 />
+      <Strategies />
+      <PeaceOfMind />
+      <Review />
+      <FAQ />
+      <Connect />
+      <Footer />
     </>
   )
 }

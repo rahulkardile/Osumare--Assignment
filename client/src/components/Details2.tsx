@@ -8,8 +8,8 @@ const Details2 = () => {
     return (
         <section className="m-auto flex flex-col relative gap-3 py-10 text-center">
             <div className="">
-                <h3>Navigating Real Estate's Digital Landscape</h3>
-                <p>Insights for Real Estate Marketing Advantage</p>
+                <h3 className="font-bold text-lg">Navigating Real Estate's Digital Landscape</h3>
+                <p className="text-sm">Insights for Real Estate Marketing Advantage</p>
             </div>
 
             <div className="flex flex-row">
