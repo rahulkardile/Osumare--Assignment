@@ -11,11 +11,41 @@ app.use(express.json());
 const data: dataTypes[] = [];
 const PORT = process.env.PORT || 3300;
 
-app.get("/", async (req: Request, res: Response, next: NextFunction) => {
-    res.send("home server")
+app.get("/get", (req: Request, res: Response, next: NextFunction) => {
+    try {
+
+        if (!data || data.length == 0) return next(ErrorHandler(404, "There is no data, Please add data first!"))
+
+        res.status(200).json({
+            success: true,
+            totalData: data.length,
+            data
+        })
+
+    } catch (error) {
+        next(error);
+    }
 })
 
-app.get("/get")
+app.get("/get/:id", async (req: Request, res: Response, next: NextFunction) => {
+    try {
+
+        const id = req.params.id;
+        const expectedData = data.find((item) => item.id == id);
+
+        if (!expectedData) return next(ErrorHandler(404, "not found!"))
+
+        res.status(200).json({
+            success: true,
+            data: expectedData
+        })
+
+    } catch (error) {
+        next(error);
+    }
+
+    res.send("home server")
+})
 
 app.post('/create', (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -44,7 +74,6 @@ app.post('/create', (req: Request, res: Response, next: NextFunction) => {
         next(error);
     }
 });
-
 
 
 app.use((err: CustomError, req: Request, res: Response, next: NextFunction) => {
