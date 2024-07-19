@@ -1,11 +1,8 @@
 import express, { Express, Request, Response, NextFunction } from "express"
-import fs from 'fs';
-import path from 'path';
 import { dataTypes, CustomError } from "./types/types.js";
 import ErrorHandler from "./utils/ErrorHandler.js";
 
 const app: Express = express();
-
 app.use(express.json());
 
 const data: dataTypes[] = [];
@@ -16,10 +13,17 @@ app.get("/get", (req: Request, res: Response, next: NextFunction) => {
 
         if (!data || data.length == 0) return next(ErrorHandler(404, "There is no data, Please add data first!"))
 
+        const page = parseInt(req.query.page as string) || 1;
+
+        const startIndex = (page - 1) * 5;
+        const endIndex = startIndex + 5;
+
+        const paginatedData = data.slice(startIndex, endIndex);
+
         res.status(200).json({
             success: true,
             totalData: data.length,
-            data
+            data: paginatedData
         })
 
     } catch (error) {
@@ -122,7 +126,7 @@ app.delete("/:id", (req: Request, res: Response, next: NextFunction) => {
 
 
         if (removeIndex == -1) {
-            
+
             return res.status(404).json({
                 success: true,
                 removeIndex,
@@ -155,3 +159,4 @@ app.use((err: CustomError, req: Request, res: Response, next: NextFunction) => {
 })
 
 app.listen(PORT, () => console.log(`server is running at ${PORT} . . . `));
+
