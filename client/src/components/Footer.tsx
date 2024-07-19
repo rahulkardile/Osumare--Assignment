@@ -8,10 +8,10 @@ import { FaFacebook, FaYoutube, FaInstagram, FaPinterest, FaWhatsappSquare } fro
 
 const Footer = () => {
     return (
-        <footer className="flex flex-row w-screen bg-blue-50 justify-between p-4 px-20">
-            <section className="w-[32%]">
+        <footer className="flex flex-row portrait:flex-col w-screen bg-blue-50 justify-between p-4 portrait:p-1 portrait:px-6 px-20">
+            <section className="w-[32%] portrait:w-4/5">
                 <img src={img} alt="img" className="w-28 " />
-                <p className="text-xs my-4 w-[80%]">The best digital marketing agency in Pune with a proven track record of consistently delivering quality service.</p>
+                <p className="text-xs my-4 w-[80%] portrait:w-full">The best digital marketing agency in Pune with a proven track record of consistently delivering quality service.</p>
 
                 <div className="">
                     <h3 className="font-semibold">Address</h3>
@@ -34,9 +34,9 @@ const Footer = () => {
 
             </section>
 
-            <section className="mt-3">
+            <section className="mt-3 portrait:hidden">
                 <h3 className="font-semibold">Menu</h3>
-                <div className="flex flex-col text-neutral-800 gap-5">
+                <div className="flex flex-col portrait:flex-row flex-wrap text-neutral-800 gap-5">
                     <Link className="mt-7" to={"/"} >Home</Link>
                     <Link to={"/"} >About</Link>
                     <Link to={"/"} >Services</Link>
@@ -46,7 +46,7 @@ const Footer = () => {
                 </div>
             </section>
 
-            <section className="w-[21%] mt-3">
+            <section className="w-[21%] portrait:w-full mt-3">
                 <h3 className="font-semibold">Social</h3>
                 <div className="w-full flex flex-row gap-6 mt-3 flex-wrap">
                     <FaXTwitter className="w-8 h-8 p-1 rounded-full bg-white" />
