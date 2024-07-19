@@ -13,14 +13,16 @@ import Footer from "../components/Footer"
 export const Home = () => {
   return (
     <>
-      <main id="home" className="">
-        <div className="flex flex-col gap-2 mt-28 w-[60%] m-auto text-center items-center justify-center">
-          <h3 className="text-4xl font-semibold text-neutral-600">Elevate <span className="text-blue-600">Real Estate Success</span> with Osumare's Digital Expertise</h3>
-          <p className="text-sm text-gray-700">Tailored Solutions for Thriving in the Digital Real Estate Landscape</p>
+      
+      <main id="home" className="w-screen">
+        <div className="flex flex-col gap-2 portrait:mt-20 mt-28 portrait:w-[80vw] w-[60%] m-auto text-center items-center justify-center">
+          <h3 className="text-4xl portrait:text-2xl font-bold text-neutral-600">Elevate <span className="text-blue-600">Real Estate Success</span> with Osumare's Digital Expertise</h3>
+          <p className="text-sm portrait:my-10 text-gray-700">Tailored Solutions for Thriving in the Digital Real Estate Landscape</p>
           <button className="text-lg font-semibold p-2 bg-blue-600 px-28 rounded-full text-white my-2">Get Started</button>
         </div>
-        <img src={img} className="w-[55vw] object-contain m-auto mt-4" alt="img" />
+        <img src={img} className="w-[55vw] portrait:w-[90vw] object-contain m-auto mt-4" alt="img" />
       </main>
+
       <Details />
       <Services />
       <Details2 />

@@ -30,7 +30,7 @@ const Connect = () => {
 
                 <section className='flex flex-col gap-1 text-start'>
                     <span className='text-xs font-semibold'>Message</span>
-                    <textarea cols={38} className='p-2 rounded-md border bg-slate-50' rows={7} placeholder='Enter Your Massage'></textarea>
+                    <textarea className='p-2 rounded-md border bg-slate-50' rows={7} placeholder='Enter Your Massage'></textarea>
                 </section>
 
             </form>

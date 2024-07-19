@@ -13,15 +13,15 @@ const Strategies = () => {
     return (
         <section className="w-screen m-auto">
             <div className="m-auto text-center">
-                <h3 className="text-lg font-bold my-1"> Driving Property Inquiries to Conversions</h3>
+                <h3 className="text-lg font-bold my-1">Driving Property Inquiries to Conversions</h3>
                 <p className="text-sm">Streamlined Strategies for Real Estate Success</p>
             </div>
-            <div className="flex flex-row gap-5 m-auto justify-center items-start mt-8">
-                <img src={img} className="w-96" alt="img" />
-                <div className="w-[400px] flex flex-col gap-3 mt-10 items-start">
-                    <h3 className="font-bold">Optimized Path to Property Purchase</h3>
+            <div className="flex flex-row portrait:flex-col gap-5 m-auto justify-center portrait:items-center items-start mt-8">
+                <img src={img} className="w-96 portrait:w-56" alt="img" />
+                <div className="w-[400px] flex flex-col portrait:text-center portrait:m-auto portrait:justify-center gap-3 mt-10 items-start">
+                    <h3 className="font-bold portrait:m-auto">Optimized Path to Property Purchase</h3>
                     <p className="text-sm">In the dynamic realm of real estate, the journey from a property inquiry to a successful conversion demands a well-crafted approach. At Osumare, we specialize in guiding potential buyers through this journey seamlessly, maximizing inquiries-turned-conversions with expert strategies.</p>
-                    <button className="bg-blue-500 p-1 px-7 text-white font-semibold rounded-full">Get Started</button>
+                    <button className="bg-blue-500 portrait: m-auto p-1 px-7 text-white font-semibold rounded-full">Get Started</button>
                 </div>
             </div>
 

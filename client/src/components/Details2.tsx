@@ -13,7 +13,7 @@ const Details2 = () => {
             </div>
 
             <div className="flex flex-row">
-                <div className="flex flex-col text-start gap-5 ml-28 my-4 z-10">
+                <div className="flex flex-col text-start gap-5 portrait:ml-5 ml-28 my-4 z-10">
 
                     <div className="flex flex-row p-3 gap-4 bg-white border rounded-lg">
                         <div className="w-10 h-10 bg-gray-100 rounded-full">
@@ -55,7 +55,7 @@ const Details2 = () => {
                 </div>
 
                 {/* image */}
-                <div className="bg-[#f9f9f9] absolute right-4 -z-20 flex justify-center rounded-xl w-[60vw]">
+                <div className="bg-[#f9f9f9] absolute portrait:hidden right-4 -z-20 flex justify-center rounded-xl w-[60vw]">
                     <img src={img} className="w-[56%] justify-center" alt="img" />
                 </div>
             </div>
