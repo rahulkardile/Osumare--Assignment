@@ -75,6 +75,42 @@ app.post('/create', (req: Request, res: Response, next: NextFunction) => {
     }
 });
 
+app.put("/update/:id", (req: Request, res: Response, next: NextFunction) => {
+    try {
+
+        const id = req.params.id;
+        const { title, description } = req.body;
+
+        if (!title && !description) return next(ErrorHandler(406, "please provide at least title or description"));
+
+        let found = false;
+
+        data.forEach((item, index) => {
+            if (item.id == id) {
+                
+                found = true;
+
+                if (title) {
+                    data[index].title = title
+                }
+
+                if (description) {
+                    data[index].description = description
+                }
+
+                res.status(200).json({
+                    success: true,
+                    data: data[index]
+                })
+            }
+        })
+
+        if(!found) return next(ErrorHandler(404, "Not found!"));
+
+    } catch (error) {
+        next(error);
+    }
+})
 
 app.use((err: CustomError, req: Request, res: Response, next: NextFunction) => {
 
