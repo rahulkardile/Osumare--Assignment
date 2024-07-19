@@ -11,13 +11,13 @@ export const Review = () => {
                 <p className="text-xs">Driving Transformations, One Brand at a Time</p>
             </div>
 
-            <div className="flex flex-row gap-9 m-auto mt-5 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-2xl p-4 w-[70%]">
-                <div className="w-[1000px] bg-slate-100 rounded-lg relative overflow-hidden h-[320px]">
+            <div className="flex flex-row portrait:flex-col gap-9 m-auto mt-5 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-2xl p-4 w-[70%]">
+                <div className="w-[1000px] portrait:w-[60vw] bg-slate-100 rounded-lg relative overflow-hidden portrait:h-auto h-[320px]">
                     <img src={img} className="object-contain" alt="img" />
-                    <IoPlayCircleSharp className="absolute text-white text-5xl top-[45%] left-[45%]" />
+                    <IoPlayCircleSharp className="absolute text-white text-5xl portrait:top-[32%] portrait:left-[39%] top-[45%] left-[45%]" />
                 </div>
 
-                <div className="flex flex-col gap-2 mt-12">
+                <div className="flex flex-col gap-2 portrait:mt-0 mt-12">
                     <div className="w-36 h-14 flex gap-2 items-center">
                         <div className="w-[30%]">
                             <img src={img} className="object-contain rounded-full" alt="img" />

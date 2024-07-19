@@ -5,10 +5,10 @@ const PeaceOfMind = () => {
             <div className="flex flex-col gap-2">
                 <h2 className="text-2xl font-semibold">Your Peace of Mind</h2>
 
-                <p className="w-[40%] m-auto text-sm">Through our conversion-focused strategies, we ensure that property seekers are not just visitors, but engaged prospects ready to make their next move in the real estate market
+                <p className="w-[40%] portrait:w-[80vw] m-auto text-sm">Through our conversion-focused strategies, we ensure that property seekers are not just visitors, but engaged prospects ready to make their next move in the real estate market
                 </p>
                 
-                <button className="p-2 px-10 bg-blue-400 w-[20%] text-white font-semibold rounded-full m-auto my-4">Get Started</button>
+                <button className="p-2 portrait:p-1 px-10 bg-blue-400 w-[20%] portrait:w-[50vw] text-white font-semibold rounded-full m-auto my-4">Get Started</button>
             </div>
         </section>
     )
