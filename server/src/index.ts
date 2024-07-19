@@ -87,7 +87,7 @@ app.put("/update/:id", (req: Request, res: Response, next: NextFunction) => {
 
         data.forEach((item, index) => {
             if (item.id == id) {
-                
+
                 found = true;
 
                 if (title) {
@@ -105,7 +105,37 @@ app.put("/update/:id", (req: Request, res: Response, next: NextFunction) => {
             }
         })
 
-        if(!found) return next(ErrorHandler(404, "Not found!"));
+        if (!found) return next(ErrorHandler(404, "Not found!"));
+
+    } catch (error) {
+        next(error);
+    }
+})
+
+app.delete("/:id", (req: Request, res: Response, next: NextFunction) => {
+    try {
+
+        const id = req.params.id;
+        if (!id) return next(ErrorHandler(404, "Id not found"));
+
+        const removeIndex = data.findIndex(item => item.id === id);
+
+        data.splice(removeIndex, 1);
+
+        if (removeIndex == -1) {
+            return res.status(404).json({
+                success: true,
+                removeIndex,
+                message: "item not found!"
+            })
+
+        } else {
+            return res.status(200).json({
+                success: true,
+                removeIndex,
+                message: "item has been deleted!"
+            })
+        }
 
     } catch (error) {
         next(error);
