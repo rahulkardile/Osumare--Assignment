@@ -1,12 +1,36 @@
 import express, { Express, Request, Response, NextFunction } from "express"
+import cors from "cors"
+import helmet from "helmet";
+import rateLimit from "express-rate-limit";
+
 import { dataTypes, CustomError } from "./types/types.js";
 import ErrorHandler from "./utils/ErrorHandler.js";
 
 const app: Express = express();
 app.use(express.json());
+app.use(helmet());
+app.use(cors({
+    origin: process.env.CORS_ORIGIN || 'http://localhost:3300' || "*"
+}));
 
 const data: dataTypes[] = [];
 const PORT = process.env.PORT || 3300;
+
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100,
+    message: 'Too many requests, please try again later.'
+});
+
+app.use(limiter);
+
+app.get("/", (req: Request, res: Response, next: NextFunction) => {
+    try {
+        res.send("server is running fine!");
+    } catch (error) {
+        next(error);
+    }
+});
 
 app.get("/get", (req: Request, res: Response, next: NextFunction) => {
     try {
