@@ -8,7 +8,7 @@ import { FaFacebook, FaYoutube, FaInstagram, FaPinterest, FaWhatsappSquare } fro
 
 const Footer = () => {
     return (
-        <footer className="flex flex-row portrait:flex-col w-screen bg-blue-50 justify-between p-4 portrait:p-1 portrait:px-6 px-20">
+        <footer className="flex flex-row portrait:flex-col w-screen pb-20 bg-blue-50 justify-between p-4 portrait:p-1 portrait:px-6 px-20">
             <section className="w-[32%] portrait:w-4/5">
                 <img src={img} alt="img" className="w-28 " />
                 <p className="text-xs my-4 w-[80%] portrait:w-full">The best digital marketing agency in Pune with a proven track record of consistently delivering quality service.</p>
