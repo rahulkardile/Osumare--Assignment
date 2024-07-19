@@ -7,7 +7,7 @@ const Connect = () => {
                 <p className='text-xs my-1'>Reach Out for Tailored Strategies and Results-Driven Solutions. Let's Elevate Your Online Presence Together</p>
             </div>
 
-            <form className='flex flex-row w-[60%] mt-10 p-4 m-auto rounded-lg bg-white border items-center '>
+            <form className='flex flex-row w-[60%] portrait:w-[90vw] portrait:flex-col mt-10 p-4 m-auto rounded-lg bg-white border items-center '>
                 
                 <section className='w-full'>
 
@@ -28,14 +28,14 @@ const Connect = () => {
 
                 </section>
 
-                <section className='flex flex-col gap-1 text-start'>
+                <section className='flex flex-col gap-1 w-full text-start'>
                     <span className='text-xs font-semibold'>Message</span>
-                    <textarea className='p-2 rounded-md border bg-slate-50' rows={7} placeholder='Enter Your Massage'></textarea>
+                    <textarea className='p-2 rounded-md border portrait:w-[96%] bg-slate-50' rows={7} placeholder='Enter Your Massage'></textarea>
                 </section>
 
             </form>
 
-            <button className='bg-blue-500 my-5 w-[20%] text-white font-semibold rounded-full m-auto px-11 p-2'>Send Message</button>
+            <button className='bg-blue-500 my-5 portrait:w-[50vw] portrait:p-1 w-[20%] text-white font-semibold rounded-full m-auto px-11 p-2'>Send Message</button>
 
         </section>
     )

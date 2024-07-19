@@ -24,7 +24,7 @@ export const Review = () => {
                         </div>
                         <h5 className="font-bold text-xs">Tabish khan</h5>
                     </div>
-                    <p className="text-xs pr-8 text-start">Osumare's expertise in pharma marketing is unparalleled. Their strategies helped us navigate complex regulations while driving remarkable growth.</p>
+                    <p className="text-xs pr-8 portrait:pr-2 text-start">Osumare's expertise in pharma marketing is unparalleled. Their strategies helped us navigate complex regulations while driving remarkable growth.</p>
                 </div>
             </div>
 

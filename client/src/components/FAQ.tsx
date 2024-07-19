@@ -7,15 +7,15 @@ const FAQ = () => {
             <h2 className='text-xl font-semibold'>Frequently Asked Questions</h2>
             <p className='text-xs'>Pinpoint your audience with precision, ensuring your marketing efforts reach those most likely to engage with your brand.</p>
 
-            <section className='p-1 w-[50%] px-10 m-auto my-11'>
+            <section className='p-1 w-[50%] portrait:w-[100vw] px-10 portrait:px-3 m-auto my-11'>
 
                 <div className="mx-auto grid max-w-xl divide-y divide-neutral-200">
                     <div className="">
                         <details className="group">
                             <summary className="flex cursor-pointer list-none items-center group-open:bg-blue-500 p-2 rounded-xl group-open:text-white justify-between  font-medium">
                                 <span>1. How does Osumare measure campaign success?</span>
-                                <span className="transition group-open:rotate-180">
-                                    <FaChevronDown />
+                                <span className="transition ml-3 group-open:rotate-180">
+                                    <FaChevronDown  />
                                 </span>
                             </summary>
                             <p className="group-open:animate-fadeIn mt-3 text-neutral-600">Springerdata offers a variety of
