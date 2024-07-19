@@ -120,9 +120,9 @@ app.delete("/:id", (req: Request, res: Response, next: NextFunction) => {
 
         const removeIndex = data.findIndex(item => item.id === id);
 
-        data.splice(removeIndex, 1);
 
         if (removeIndex == -1) {
+            
             return res.status(404).json({
                 success: true,
                 removeIndex,
@@ -130,6 +130,7 @@ app.delete("/:id", (req: Request, res: Response, next: NextFunction) => {
             })
 
         } else {
+            data.splice(removeIndex, 1);
             return res.status(200).json({
                 success: true,
                 removeIndex,
